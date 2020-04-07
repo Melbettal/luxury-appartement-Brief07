@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title>Connexion | YOUSHOP</title>
+    <link rel="stylesheet" type="text/css" href="../css/login.css">
+</head>
+
+<body>
+    <div class="loginbox">
+        <img src="../icons/login.png" width="50px" height="50px" class="avatar">
+        <H1>Connexion</H1>
+        <form>
+            <p>Nom d'utilisateur</p>
+            <input type="text" name="" placeholder="Nom d'utilisateur" class="ids">
+            <p>Mot de passe</p>
+            <input type="password" name="" placeholder="Entrer Mot de passe" class="ids" id="pass">
+            <i id="pShow"></i>
+            <input type="submit" name="" value="LOGIN" class="login"><br><br>
+            <a href="#"> Mot de passe oublié? </a><br>
+            <a href="sign-up.html"> Tu n'as pas un compte? </a>
+
+        </form>
+    </div>
+    <script>
+        var state = false;
+        var btn = document.getElementById('pShow');
+        var input = document.getElementById('pass');
+        btn.addEventListener('click', () => {
+            if (!state) {
+                state = true;
+                btn.style = "background-image:url('../icons/eye-Show.png')";
+                input.setAttribute('type', 'text');
+            } else {
+                state = false;
+                btn.style = "background-image:url('../icons/eye-Hide.png')";
+                input.setAttribute('type', 'password');
+            }
+        });
+    </script>
+
+</body>
+
+</html>

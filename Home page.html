@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<br lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./res/css/main.css">
+  <title>MRent</title>
+</head>
+
+<body>
+  <!-- this the Navbar -->
+  <div id="mySidenav" class="sidenav">
+    <a href="#!" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#Header"><img src="./res/img/Logo.png" alt="logo"></a>
+    <a href="#GALLERY">Gallery</a>
+    <a href="#SERVICES">Services</a>
+    <a href="#Rent">Rent</a>
+  </div>
+
+  <div id="Header">
+    <div class="open" onclick="openNav()">&#9776;</div>
+    <div class="headtit">Renting Done </br>
+      Right. Finally.
+      <div class="button4">Rent your Luxury appartement Now!</div>
+    </div>
+    <div class="navbar">
+      <img src="./res/img/Logo.png" alt="logo">
+    </div>
+  </div>
+
+
+  <div class="main-slider">
+    <div class="loginbox">
+      <H1>You have an account? Sign In</H1>
+      <form>
+        <p>E-mail</p>
+        <input type="text" name="" placeholder="Enter your E-mail" class="ids">
+        <p>Password</p>
+        <input type="password" name="" placeholder="Enter your Password" class="ids" id="pass">
+        <i id="pShow"></i>
+        <input type="submit" name="" value="Sign In" class="login"><br><br>
+        <input type="button" value="Sign Up" class="signup" onclick="Validada(), check()"><br><br>
+        <div class="forgot">
+          <a href="#"> Forgot your password? </a><br>
+          <a href="#"> You don't have an account? </a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- The Modal -->
+  <div id="myModalsig" class="modalsig">
+
+    <!-- Modal content -->
+    <div class="modal-contentsig">
+      <span class="closeme">&times;</span>
+      <div class="form" method="post">
+        <fieldset class="f1">
+          <h2 style="text-align: center;"> Sign-up ! </h2>
+          <table>
+            <tr>
+              <td> <label for="finom"> first name : </label></td>
+              <td> <input type="text" style="text-transform: uppercase" id="finom"> </td>
+              <td><span id="1"></span> </td>
+            </tr>
+            <tr>
+              <td> <label for="linom"> last name : </label></td>
+              <td> <input type="text" style="text-transform: uppercase" id="linom"> </td>
+              <td><span id="2"></span> </td>
+            </tr>
+
+            <tr>
+              <td><label for="email"> E-mail : </label> </td>
+              <td><input type="text" id="email"></td>
+              <td> <span id="3"></span></td>
+            </tr>
+
+            <tr>
+              <td><label for="phone"> Phone number : </label> </td>
+              <td><input type="text" id="phone"></td>
+              <td> <span id="4"></span> </td>
+            </tr>
+
+            <tr>
+              <td><label for="pwrd"> Password : </label> </td>
+              <td><input type="text" id="pwrd"></td>
+              <td> <span id="5"></span> </td>
+            </tr>
+
+            <tr>
+              <td><label for="confirm"> Confirm : </label></td>
+              <td><input type="text" id="confirm"><br>
+              <td> <span id="6"></span> </td>
+          </table>
+          <input type="button" class="button5" value="Sign-up" onclick="Validatesig()">
+        </fieldset>
+      </div>
+    </div>
+  </div>
+
+  <div class="para">
+    <div class="txt"> We’ve helped people rent
+      over $100 million
+      of real estate.
+      <div class="button3">Learn more about us</div>
+    </div>
+    <!-- <div class="img" id="bgImage"></div> -->
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <img src="./res/img/3.jpg" style="width:100%">
+      </div>
+      
+      <div class="mySlides fade">
+        <img src="./res/img/4.jpg" style="width:90%">
+      </div>
+      
+      <div class="mySlides fade">
+        <img src="./res/img/5.jpg" style="width:90%">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="./res/img/6.jpg" style="width:90%">
+      </div>
+      
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      
+      </div>
+      <br>
+  </div>
+
+  <!-- this is the gallery -->
+  <div id=GALLERY>
+    <div class="ga">Gallery</div>
+    <div class="gallery">
+      <div class="image-gallery">
+        <a href="./res/img/G1.jpg" class="img-1">
+        </a>
+        <a href="./res/img/G2.jpg" class="img-2">
+        </a>
+        <a href="./res/img/G3.png" class="img-3">
+        </a>
+        <a href="./res/img/G4.png" class="img-4">
+        </a>
+        <a href="./res/img/G5.png" class="img-5">
+        </a>
+        <a href="./res/img/G6.jpg" class="img-6">
+        </a>
+        <a href="./res/img/G7.jpg" class="img-7">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div id="SERVICES">Services</div>
+  <div class="conta1">
+    <img class="servpic" src="./res/img/zane-lee-uG1RcoffMNc-unsplash.jpg" alt="picture">
+    <div class="serv1">
+      <div class="servtit">Golden Beaches</div>
+      <div class="line"></div>
+      <div class="servpara">Apart from the Blue Flag Grammeno
+        Beach with its pristine golden sand and lapping azure
+        waters and the Votsalo Beach with its pebbly quiet shore
+        and memorable waters, the area beyond the peninsula is famous
+        for its stunning and unspoiled beaches. </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="conta2">
+    <img class="servpic2" src="./res/img/toa-heftiba-dE8HQZClGsI-unsplash.jpg" alt="picture">
+    <div class="serv2">
+      <div class="servtit2">Thrilling Activities</div>
+      <div class="line2"></div>
+      <div class="servpara2">Some of the most popular activities
+        you will enjoy engaging in are walking and cycling, especially
+        during spring and autumn time. Southwest Crete is known as the
+        land of the gorges! </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="conta3">
+    <img class="servpic" src="./res/img/sebastian-pena-lambarri-7i5HMCGupVw-unsplash.jpg" alt="picture">
+    <div class="serv3">
+      <div class="servtit3">Ultimate Diving</div>
+      <div class="line3"></div>
+      <div class="servpara3">When travelling to south Crete there is,
+        literally, more than meets the eye. Don’t miss the underwater
+        hidden treasures of the Libyan Sea. </div>
+    </div>
+  </div>
+  </div>
+
+  <section id="Rent">
+    <div class="tte">Rent</div>
+    <div class="containerent">
+      <div class="content">
+        <div class="card-promo">
+
+
+          <div class="promo-img">
+            <img src="./res/img/R1.jpg" alt="">
+          </div>
+          <div class="promo-content">
+            <div class="contry">
+              <div class="hh4">RITZ PLAZA</div>
+            </div>
+            <div class="price">
+              <div class="pp4">The Ritz Plaza, 235 West 48th Street, New York, NY 10036, USA</div>
+            </div>
+          </div>
+          <button onclick="reserve()" id="Rentme">Rent me!</button>
+        </div>
+
+        <div class="card-promo">
+          <div class="promo-img">
+            <img src="./res/img/R2.jpg" alt="">
+          </div>
+          <div class="promo-content">
+            <div class="contry">
+              <div class="hh4">Raddit Units</div>
+            </div>
+            <div class="price">
+              <div class="pp4">242 Mulberry St, New York, NY 10012, USA</div>
+            </div>
+          </div>
+          <button onclick="reserve()" id="Rentme">Rent me!</button>
+        </div>
+
+        <div class="card-promo">
+          <div class="promo-img">
+            <img src="./res/img/R3.jpg" alt="">
+          </div>
+          <div class="promo-content">
+            <div class="contry">
+              <div class="hh4">Dutch</div>
+            </div>
+            <div class="price">
+              <div class="pp4">19 Dutch Street, New York, NY 10038, USA</div>
+            </div>
+          </div>
+          <button onclick="reserve()" id="Rentme">Rent me!</button>
+        </div>
+
+        <div class="card-promo">
+          <div class="promo-img">
+            <img src="./res/img/R4.jpg" alt="">
+          </div>
+          <div class="promo-content">
+            <div class="contry">
+              <div class="hh4">SUMMIT</div>
+            </div>
+            <div class="price">
+              <div class="pp4">222 East 44th Street, New York, NY 10017, USA</div>
+            </div>
+          </div>
+          <button onclick="reserve()" id="Rentme">Rent me!</button>
+        </div>
+
+        <div class="card-promo">
+          <div class="promo-img">
+            <img src="./res/img/R5.jpg" alt="">
+          </div>
+          <div class="promo-content">
+            <div class="contry">
+              <div class="hh4">Egypt - le grand tour</div>
+            </div>
+            <div class="price">
+              <div class="pp4">Starting from 1430 $</div>
+            </div>
+          </div>
+          <button onclick="reserve()" id="Rentme">Rent me!</button>
+        </div>
+
+        <div class="card-promo">
+          <div class="promo-img">
+            <img src="./res/img/R6.jpg" alt="">
+          </div>
+          <div class="promo-content">
+            <div class="contry">
+              <div class="hh4">India - Golden Triangle</div>
+            </div>
+            <div class="price">
+              <div class="pp4">Starting from 1910 $</div>
+            </div>
+          </div>
+          <button onclick="reserve()" id="Rentme">Rent me!</button>
+        </div>
+
+        <div class="card-promo">
+          <div class="promo-img">
+            <img src="./res/img/R7.jpg" alt="">
+          </div>
+          <div class="promo-content">
+            <div class="contry">
+              <div class="hh4">Antalya vol direct</div>
+            </div>
+            <div class="price">
+              <div class="pp4">23 South 1st Street, New York, NY 11249, USA</div>
+            </div>
+          </div>
+          <button onclick="reserve()" id="Rentme">Rent me!</button>
+        </div>
+
+        <div class="card-promo">
+          <div class="promo-img">
+            <img src="./res/img/R8.jpg" alt="">
+          </div>
+          <div class="promo-content">
+            <div class="contry">
+              <div class="hh4">Circuit Europe de l’Est</div>
+            </div>
+            <div class="price">
+              <div class="pp4">50 Prince St, New York, NY 10012, USA</div>
+            </div>
+          </div>
+          <button onclick="reserve()" id="Rentme">Rent me!</button>
+        </div>
+
+        <div class="card-promo">
+          <div class="promo-img">
+            <img src="./res/img/R9.jpg" alt="">
+          </div>
+          <div class="promo-content">
+            <div class="contry">
+              <div class="hh4">Brésil – Rio De Janeiro</div>
+            </div>
+            <div class="price">
+              <div class="pp4">45 Clifton Pl, Jersey City, NJ 07304, USA
+                Unit 3D</div>
+            </div>
+          </div>
+          <button onclick="reserve()" id="Rentme">Rent me!</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- this is the footer -->
+  <footer>
+    <div class="container">
+      <div class="content">
+        <div class="about">
+          <img src="./res/img/Logo.png" alt="">
+          <p>MRent is at your service to develop
+            tailor-made trips that truly meet your requirements.
+            Whether you choose to escape alone, as a couple,
+            as a family or with a group of friends, we will make
+            each trip an exceptional experience for you. </p>
+        </div>
+        <div class="quick-links">
+          <h3>QUICK LINKS</h3>
+          <a class="navtext" href="#home">HOME</a>
+          <a class="navtext" href="#news">ABOUT US</a>
+          <a class="navtext" href="#contact">SERVICES</a>
+          <a class="navtext" href="#about">PROMO</a>
+          <a class="navtext" href="#about">GALERIE</a>
+          <a class="navtext" href="#about">CONTACT US</a>
+        </div>
+        <div class="contact">
+          <h3>CONTACT US</h3>
+          <p>Feel free to get in touch with us via phone or send us a message</p>
+          <a href="">+1 800 123 1234</a>
+          <a class="mail" href="">email@website.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <div class="left">
+        <p>&copy; Copyright 2019. All Right Reserved</p>
+      </div>
+      <div class="right">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+      </div>
+    </div>
+  </footer>
+  </div>
+
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="form" method="post">
+        <fieldset class="f1">
+          <h2 style="text-align: center;"> Rent this appartement </h2>
+          <table>
+            <tr>
+              <td> <label for="fnom"> first name : </label></td>
+              <td> <input type="text" style="text-transform: uppercase" id="fnom"> </td>
+              <td><span id="1"></span> </td>
+            </tr>
+            <tr>
+              <td> <label for="lnom"> last name : </label></td>
+              <td> <input type="text" style="text-transform: uppercase" id="lnom"> </td>
+              <td><span id="2"></span> </td>
+            </tr>
+
+            <tr>
+              <td><label for="date"> Birthday : </label> </td>
+              <td><input type="date" id="date"></td>
+              <td> <span id="3"></span></td>
+            </tr>
+
+            <tr>
+              <td><label for="datedebut"> Suggest a renting day: </label> </td>
+              <td><input type="date" id="datedebut"></td>
+              <td> <span id="4"></span> </td>
+            </tr>
+
+            <tr>
+              <td><label for="quantity"> Number of people : </label> </td>
+              <td><input type="number" id="quantity" name="quantity" min="1" max="5"></td>
+              <td> <span id="6"></span> </td>
+            </tr>
+
+            <tr>
+              <td><label for="nbr" id="pets"> Do you have any pets? : </label></td>
+              <td>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male" style="font-size: 15px;">Yes</label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female" style="font-size: 15px;">No</label><br>
+          </table>
+          <input type="submit" class="button5" value="Rent" onclick="Validate() , check()">
+        </fieldset>
+      </div>
+    </div>
+  </div>
+
+  <form method="post" id="validation">
+    <fieldset id="f1">
+      <h2> validation:</h2>
+      <div id="champ1"> Your appartement : </div>
+      <div id="champ2"> Your name is : </div>
+      <div id="champ3"> Your age : </div>
+      <div id="champ4"> the date : </div>
+      <div id="champ5"> People : </div>
+
+      <input type="button" id="button6" value="submit" class="close">
+    </fieldset>
+  </form>
+
+  <script src="./script.js"></script>
+
+ 
+
+  <script>
+    /* var modal = document.getElementById("myModal");
+    var btn = document.getElementById("Rentme");
+    var span = document.getElementsByClassName("close")[0];
+
+    function Validate() {
+      modal.style.display = "block";
+    }
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }*/
+
+    var btnValider = document.getElementsByClassName("close")[0];
+    var modals = document.getElementById("validation");
+
+
+
+    var fnom = document.getElementById('fnom');
+    var lnom = document.getElementById('lnom');
+    var date = document.getElementById('date');
+    var datedebut = document.getElementById('datedebut');
+    var quantity = document.getElementById('quantity');
+    var cpt = 0;
+
+    function Validate() {
+      cpt = 0;
+      if (fnom.value == "") document.getElementById('1').innerHTML = "enter your first name ";
+      else {
+        document.getElementById('1').innerHTML = " ";
+        cpt++;
+      }
+      if (lnom.value == "") document.getElementById('2').innerHTML = "enter your last name";
+      else {
+        document.getElementById('2').innerHTML = " ";
+        cpt++;
+      }
+      if (date.value == "") document.getElementById('3').innerHTML = "enter your birthday";
+      else {
+        document.getElementById('3').innerHTML = " ";
+        cpt++;
+      }
+      if (datedebut.value == "") document.getElementById('4').innerHTML = "enter a valid date";
+      else {
+        document.getElementById('4').innerHTML = " ";
+        cpt++;
+      }
+      if (quantity.value == "") document.getElementById('6').innerHTML = "enter the number of people";
+      else {
+        document.getElementById('6').innerHTML = " ";
+        cpt++;
+      }
+      console.log(cpt);
+      return cpt;
+    }
+    function Validatesig() {
+      var rgxEmail = /^[A-Za-z0-9-_.]+@[A-Za-z]{4,9}.[A-Za-z]{2,3}$/;
+      var rgx = /^[0][5-7-6][0-9]{8}$/;
+      if (finom.value == "") document.getElementById('1').innerHTML = "enter your first name ";
+      else {
+        document.getElementById('1').innerHTML = " ";
+      }
+      if (linom.value == "") document.getElementById('2').innerHTML = "enter your last name";
+      else {
+        document.getElementById('2').innerHTML = " ";
+      }
+      if (email.value == "") document.getElementById('3').innerHTML = "enter a valid email";
+      else if (!rgxEmail.test(email.value)) document.getElementById('3').innerHTML = "incorrect format";
+      else {
+        document.getElementById('3').innerHTML = " ";
+      }
+      if (phone.value == "") document.getElementById('4').innerHTML = "enter a valid number";
+      else if (!rgx.test(phone.value)) document.getElementById('4').innerHTML = "incorrect number";
+      else {
+        document.getElementById('4').innerHTML = " ";
+      }
+      if (pwrd.value == "") document.getElementById('5').innerHTML = "enter a password";
+      else {
+        document.getElementById('5').innerHTML = " ";
+        cpt++;
+      }
+      if (confirm.value == "") document.getElementById('6').innerHTML = "re enter your password";
+      else {
+        document.getElementById('6').innerHTML = " ";
+        cpt++;
+      }
+      console.log(cpt);
+      return cpt;
+
+    }
+
+    function getAge(date) {
+      var diff = Date.now() - date.getTime();
+      var age = new Date(diff);
+      return Math.abs(age.getUTCFullYear() - 1970);
+    }
+
+    function diffdate(d1, d2) {
+      var WNbJours = d2.getTime() - d1.getTime();
+      return Math.ceil(WNbJours / (1000 * 60 * 60 * 24));
+    }
+
+    function check() {
+      if (cpt == 5) {
+        document.getElementById("myModal").style.display = "none";
+        document.getElementById("validation").style.display = "block";
+        document.getElementById('champ1').innerHTML += fnom.value;
+        document.getElementById('champ2').innerHTML += lnom.value;
+        document.getElementById('champ3').innerHTML += getAge(new Date(date.value));
+        document.getElementById('champ4').innerHTML += getAge(new Date(datedebut.value));
+        document.getElementById('champ5').innerHTML += quantity.value;
+        fnom.value = "";
+        lnom.value = "";
+        date.value = "";
+        datedebut.value = "";
+        quantity.value = "";
+        pets.value = "";
+      }
+    }
+
+
+    window.onclick = function (event) {
+      if (event.target == modals) {
+        modals.style.display = "none";
+      }
+      btnValider.onclick = function () {
+        modals.style.display = "none";
+        alert('Votre demande est effectuée !');
+        document.getElementById('champ1').innerHTML = "your appartement : ";
+        document.getElementById('champ2').innerHTML = "your name is : ";
+        document.getElementById('champ3').innerHTML = "your age : ";
+        document.getElementById('champ4').innerHTML = "the date : ";
+        document.getElementById('champ5').innerHTML = "people number : ";
+      }
+    }
+
+    /*this is the rent me modal script*/
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("Rentme");
+    var span = document.getElementsByClassName("close")[0];
+    var btnFermer = document.getElementById("button6");
+
+    btnFermer.onclick = function () {
+      f1.style.display = "none";
+    }
+
+    btn.onclick = function () {
+      modal.style.display = "block";
+    }
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+
+    /*this is the singup modal script*/
+    var modalsig = document.getElementById("myModalsig");
+    var span = document.getElementsByClassName("closeme")[0];
+
+    function Validada() {
+      modalsig.style.display = "block";
+    }
+    span.onclick = function () {
+      modalsig.style.display = "none";
+    }
+    window.onclick = function (event) {
+      if (event.target == modalsig) {
+        modalsig.style.display = "none";
+      }
+    }
+
+
+    /*this is the rent me modal script*/
+    // var modal = document.getElementById("myModal");
+    // var btn = document.getElementById("Rentme");
+    // var span = document.getElementsByClassName("close")[0];
+
+    // btn.onclick = function () {
+    //   modal.style.display = "block";
+    // }
+    // span.onclick = function () {
+    //   modal.style.display = "none";
+    // }
+    // window.onclick = function (event) {
+    //   if (event.target == modal) {
+    //     modal.style.display = "none";
+    //   }
+    // }
+
+  </script>
+</body>
+</html>
