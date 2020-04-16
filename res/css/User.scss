@@ -1,0 +1,527 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+$color1:#EAA85A;
+$color2: #00C6D9;
+$Color :#5a065a;
+$BGbtn :rgb(211, 211, 211);
+
+@mixin image {
+    display: flex;
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@mixin BackG {
+    position: fixed;
+    overflow-x: hidden;
+}
+
+@mixin text {
+    font-family: 'Modern No. 20', sans-serif;
+    font-size: 111px;
+    margin-top: 150px;
+}
+
+@mixin paragraphe {
+    display: flex;
+    height: 600px;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    margin-top: -20px;
+}
+
+@mixin button {
+    font-family: 'Modern No. 20', sans-serif;
+    letter-spacing: 2px;
+    border-radius: 99px;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+    text-decoration: none;
+    display: flex;
+}
+
+@mixin line {
+    background-color: black;
+    min-height: 5px;
+    width: 200px;
+    margin-left: 500px;
+    display: flex;
+}
+
+
+
+@mixin btn() {
+    width: 180px;
+    height: 40px;
+    // background-color: $Color;
+    color: white;
+    font-size: 18px;
+    border-radius: 20px;
+    border-style: none;
+
+    &:hover {
+        cursor: pointer;
+        // background-color: $BGbtn;
+        // color: $Color;
+    }
+}
+
+@mixin Buttons() {
+    @include btn();
+    width: 300px;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    // background-color: $BGbtn;
+    margin: auto;
+    font-weight: bold;
+    display: flex;
+    padding: 5px;
+    padding-left: 15px;
+    text-align: center;
+    cursor: pointer;
+
+    img {
+        height: 20px;
+        width: 20px;
+        margin-right: 70px;
+    }
+}
+
+.sidenav {
+    @include BackG();
+    height: 100%;
+    width: 0;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: whitesmoke;
+    transition: 0.5s;
+    padding-top: 60px;
+    font-family: 'Modern No. 20', sans-serif;
+    border: black;
+    justify-content: center;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 50px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: $color1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.button1 {
+    @include button();
+    color: black;
+    font-size: 25px;
+    font-weight: 250;
+    margin-top: 50px;
+    padding: 10px 20px;
+    background-color: white;
+    margin: 20px;
+    justify-content: center;
+}
+
+.button2 {
+    @include button();
+    color: black;
+    font-size: 17px;
+    font-weight: 250;
+    margin-top: 50px;
+    padding: 10px 20px;
+    background-color: white;
+    margin: 20px;
+    width: 50%;
+    height: 15px;
+    justify-content: center;
+    margin-left: 17%;
+}
+
+.button1:hover {
+    background-color: black;
+    color: white;
+}
+
+.button2:hover {
+    background-color: $color1;
+    color: white;
+}
+
+.open {
+    font-size: 50px;
+    cursor: pointer;
+    padding: 20px;
+}
+
+#Header {
+    background-color: $color1;
+    display: flex;
+    min-height: 754px;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    margin-top: -20px;
+}
+
+.headtit {
+    @include text();
+    margin-left: 20px;
+}
+
+.image {
+    @include image();
+    width: 50%;
+}
+
+.main-slider {
+    width: 25%;
+    height: 70vh;
+    margin: 0 auto;
+    position: relative;
+    color: white;
+    font-size: 2em;
+    margin-top: -40%;
+    margin-left: 60%;
+    margin-bottom: 12%;
+}
+
+.main-slider img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.main-slider .img-info {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+.navbar {
+    margin-left: 590px;
+}
+
+.main-slider .nav-icon {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    z-index: 4;
+}
+
+.main-slider .nav-icon i {
+    cursor: pointer;
+}
+
+.main-slider .rounded-buttons {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    bottom: -102%;
+    width: 100%;
+    height: 100%;
+}
+
+
+.main-slider .rounded-buttons div {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rebeccapurple;
+    border: 1px solid #eee;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.main-slider .rounded-buttons div.active {
+    background-color: orangered;
+}
+
+.button4 {
+    font-family: 'Modern No. 20', sans-serif;
+    letter-spacing: 2px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+    text-decoration: none;
+    display: flex;
+    // color: white;
+    font-size: 25px;
+    font-weight: 250;
+    background-color: none;
+    margin: 20px;
+    justify-content: center;
+    width: 70%;
+    box-shadow: 1px 1px 2px white;
+    border: 1px solid white;
+    padding: 20px;
+}
+
+.button4:hover {
+    background-color: white;
+    color: black;
+}
+
+.formUpdate {
+    display: none;
+}
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Modern No. 20', sans-serif;
+}
+
+body {
+    .espace {
+        height: 80px;
+    }
+
+    .all {
+        width: 90%;
+        margin: auto;
+        display: inline-block;
+        justify-content: space-between;
+
+        .part1 {
+            width: 33%;
+
+            #btnAdd {
+                @include Buttons();
+            }
+
+            #newHome {
+                display: none;
+                width: 100%;
+
+                form {
+                    width: 90%;
+                    border: 1px solid black;
+                    background-color: rgb(0, 0, 0);
+                    border-radius: 15px;
+                    margin: auto;
+                    padding: 30px;
+                    box-sizing: border-box;
+
+                    input {
+                        padding: 10px;
+                        width: 95%;
+                        margin: auto;
+                        height: 40px;
+                        margin-bottom: 10px;
+                        box-sizing: border-box;
+                        font-size: 15px;
+                        color: black;
+                        border-radius: 5px;
+                    }
+
+                    button {
+                        width: 150px;
+                        color: white;
+                        font-size: 15px;
+                        height: 40px;
+                        border-style: none;
+                        border-radius: 30px;
+                        margin-top: 20px;
+                        background-color: $Color;
+                        font-weight: bold;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .part2 {
+            width: 33%;
+
+            button {
+                @include Buttons();
+
+                img {
+                    width: 25px;
+                    height: 18px;
+                    margin-right: 25px;
+                }
+            }
+
+            table {
+                border-collapse: collapse;
+                display: none;
+                margin: auto;
+                margin-top: 50px;
+                box-sizing: border-box;
+                width: 80%;
+
+                th {
+                    height: 50px;
+
+                    td {
+                        padding: 5px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        .part3,
+        .part1 {
+            width: 33%;
+
+            button {
+                @include Buttons();
+
+                img {
+                    margin-right: 30px;
+                }
+            }
+
+            table {
+                display: none;
+                margin-top: 50px;
+                box-sizing: border-box;
+                border-collapse: collapse;
+
+                td {
+                    padding: 5px;
+                    text-align: center;
+                }
+            }
+
+            .formDelete,
+            .formUpdate {
+                margin-top: 40px;
+                display: none;
+
+                div {
+                    display: inline-table;
+                    width: 100%;
+                    font-size: 20px;
+                    justify-content: center;
+
+
+                    label {
+                        margin-left: -30px;
+                    }
+
+                    input {
+                        // margin-top: 20px;
+                        // margin-left: 10px;
+                        // background-color: rgb(224, 224, 224);
+                        height: 26px;
+                        width: 191px;                        
+                        // border-radius: 10px;
+                        // border-style: none;
+                    }
+
+                    button {
+                        @include button();
+                        color: black;
+                        font-size: 25px;
+                        font-weight: 250;
+                        margin-top: 50px;
+                        padding: 10px 20px;
+                        background-color: white;
+                        margin: 20px;
+                        justify-content: center;
+                        width: 70%;
+                    }
+                }
+            }
+        }
+
+        .part4 {
+            margin-top: 100px;
+
+            #btnAdd {
+                @include Buttons();
+            }
+
+            #newHome {
+                display: none;
+                width: 100%;
+
+                form {
+                    width: 60%;
+                    border: 1px solid black;
+                    background-color: rgb(0, 0, 0);
+                    border-radius: 15px;
+                    margin: auto;
+                    padding: 30px;
+                    box-sizing: border-box;
+
+                    input {
+                        padding: 10px;
+                        width: 95%;
+                        margin: auto;
+                        height: 40px;
+                        margin-bottom: 10px;
+                        box-sizing: border-box;
+                        font-size: 15px;
+                        color: black;
+                        border-radius: 5px;
+                    }
+
+                    button {
+                        width: 150px;
+                        color: white;
+                        font-size: 15px;
+                        height: 40px;
+                        border-style: none;
+                        border-radius: 30px;
+                        margin-top: 20px;
+                        background-color: $Color;
+                        font-weight: bold;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+
+
+
+
+
+        @media only screen and (max-width: 1250px) {
+            body {
+                .all {
+                    flex-direction: column;
+
+                    div {
+                        margin-top: 60px;
+                        margin-bottom: 60px;
+                        width: 100%;
+
+                        table {
+                            width: 90%;
+                            margin: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

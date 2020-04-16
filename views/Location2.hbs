@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>User page</title>
+    <link href="../res/css/User.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div id="Header">
+        <div class="headtit">Renting Done Right. Finally.
+            <button class="button4" type="submit" id="btnUpdate">Update your information!</button>
+            <button class="button4" type="submit" id="btnDelete">Delete your account!</button>
+        </div>
+        <div class="all">
+            <div class="part1">
+                <table border=1 id="table1">
+                    <thead>
+                        <tr>
+                            <th> first name </th>
+                            <th> Last name </th>
+                            <th> E-mail </th>
+                            <th> Phone </th>
+                            <th> Password </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each InfosUser}}
+                        <tr>
+                            <td>{{this.first_name}}</td>
+                            <td>{{this.last_name}}</td>
+                            <td>{{this.E_mail}}</td>
+                            <td>{{this.Phone_number}}</td>
+                            <td>{{this.Password}}</td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+
+
+            <div class="espace"> </div>
+
+
+            <form class="formUpdate" method="post" action="UPDATE">
+                <div><label for="E_mail" style="font-size: x-large;"> Email User : </label> <input type="text" name="E_mail"><br>
+                    <label for="Password"style="font-size: x-large;"> New Password : </label> <input type="text" name="Password">
+                    <button type="submit" style="font-size: x-large;" class="button1">Update user</button></div>
+            </form>
+
+            <script>
+                $(document).ready(function () {
+                    $('#btnUpdate').click(function () {
+                        $('#table1').slideToggle(1000);
+                        $('.formUpdate').slideToggle(1000);
+                    });
+                });
+            </script>
+        {{!-- </div> --}}
+
+
+        <div class="part3">
+            <table border=1 id="table3">
+               <thead>
+                    <tr>
+                        <th> first name </th>
+                        <th> Last name </th>
+                        <th> E-mail </th>
+                        <th> Phone number </th>
+                        <th> Password </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each InfosUser}}
+                    <tr>
+                        <td>{{this.first_name}}</td>
+                        <td>{{this.last_name}}</td>
+                        <td>{{this.E_mail}}</td>
+                        <td>{{this.Phone_number}}</td>
+                        <td>{{this.Password}}</td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+
+            <form class="formDelete" method="post" action="DELETE">
+                <div><label for="E_mail"  style="font-size: x-large;"> Email : </label> <input type="text" name="E_mail">
+                    <button type="submit" style="font-size: x-large;" class="button1">Delete user</button></div>
+            </form>
+
+            <script>
+                $(document).ready(function () {
+                    $('#btnDelete').click(function () {
+                        $('#table3').slideToggle(1000);
+                        $('.formDelete').slideToggle(1000);
+                    });
+                });
+            </script>
+        </div>
+    </div>
+
+        {{!-- <div class="part2">
+            <button type="button" id="btnShow"> <img src="../public/img/show.png">Show reservations</button>
+            <table id="table2" border=1>
+                <thead>
+                    <tr>
+                        <th> CIN </th>
+                        <th> Nom </th>
+                        <th> Age </th>
+                        <th> DATE DEBUT </th>
+                        <th> DATE FIN </th>
+                        <th> Nbr </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each Reservations}}
+                    <tr>
+                        <td>{{this.CIN}}</td>
+                        <td>{{this.nom}}</td>
+                        <td>{{this.age}}</td>
+                        <td>{{this.datedebut}}</td>
+                        <td>{{this.datefin}}</td>
+                        <td>{{this.nbrPers}}</td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+
+            <script>
+                $(document).ready(function () {
+                    $('#btnShow').click(function () {
+                        $('#table2').slideToggle(1000);
+                    });
+                });
+            </script>
+        </div>
+
+    </div>
+
+    <div class="part4">
+        <button type="button" id="btnAdd"> <img src="../public/img/add.png">Add Home</button>
+        <div class="espace"></div>
+        <div id="newHome">
+            <form action="ADD" method="post">
+                <input type="file" name="image">
+                <input type="text" name="description" placeholder="description"><br>
+                <input type="text" name="adresse" placeholder="adresse"><br>
+                <input type="number" name="prix" placeholder="prix"><br>
+                <div style="text-align: center;"><button type="submit" id="btnAjout"> Add Home</button></div>
+            </form>
+        </div>
+        <script>
+            $(document).ready(function () {
+                $('#btnAdd').click(function () {
+                    $('#newHome').slideToggle(1000);
+                });
+            });
+        </script> --}} 
+        {{!-- </div> --}}
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+        </script>
+</body>
+
+</html>

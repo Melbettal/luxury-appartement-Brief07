@@ -1,0 +1,415 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body .menu {
+  width: 100%;
+  background-color: black;
+  height: 80px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+body #logo {
+  float: left;
+  height: 50px;
+  margin: 30px;
+  margin-top: 10px;
+  margin-left: 200px;
+}
+
+body .logout {
+  width: 180px;
+  height: 40px;
+  background-color: #5a065a;
+  color: white;
+  font-size: 18px;
+  border-radius: 20px;
+  border-style: none;
+  float: right;
+  margin: 20px;
+  margin-right: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+body .logout:hover {
+  cursor: pointer;
+  background-color: lightgray;
+  color: #5a065a;
+}
+
+body .logout img {
+  width: 20px;
+  height: 20px;
+}
+
+body .espace {
+  height: 80px;
+}
+
+body .all {
+  width: 90%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .all .part1 {
+  width: 33%;
+}
+
+body .all .part1 #btnAdd {
+  width: 180px;
+  height: 40px;
+  background-color: #5a065a;
+  color: white;
+  font-size: 18px;
+  border-radius: 20px;
+  border-style: none;
+  width: 300px;
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: lightgray;
+  margin: auto;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px;
+  padding-left: 15px;
+  text-align: center;
+  cursor: pointer;
+}
+
+body .all .part1 #btnAdd:hover {
+  cursor: pointer;
+  background-color: lightgray;
+  color: #5a065a;
+}
+
+body .all .part1 #btnAdd img {
+  height: 20px;
+  width: 20px;
+  margin-right: 70px;
+}
+
+body .all .part1 #newHome {
+  display: none;
+  width: 100%;
+}
+
+body .all .part1 #newHome form {
+  width: 90%;
+  border: 1px solid black;
+  background-color: black;
+  border-radius: 15px;
+  margin: auto;
+  padding: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body .all .part1 #newHome form input {
+  padding: 10px;
+  width: 95%;
+  margin: auto;
+  height: 40px;
+  margin-bottom: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 15px;
+  color: black;
+  border-radius: 5px;
+}
+
+body .all .part1 #newHome form button {
+  width: 150px;
+  color: white;
+  font-size: 15px;
+  height: 40px;
+  border-style: none;
+  border-radius: 30px;
+  margin-top: 20px;
+  background-color: #5a065a;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+body .all .part2 {
+  width: 33%;
+}
+
+body .all .part2 button {
+  width: 180px;
+  height: 40px;
+  background-color: #5a065a;
+  color: white;
+  font-size: 18px;
+  border-radius: 20px;
+  border-style: none;
+  width: 300px;
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: lightgray;
+  margin: auto;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px;
+  padding-left: 15px;
+  text-align: center;
+  cursor: pointer;
+}
+
+body .all .part2 button:hover {
+  cursor: pointer;
+  background-color: lightgray;
+  color: #5a065a;
+}
+
+body .all .part2 button img {
+  height: 20px;
+  width: 20px;
+  margin-right: 70px;
+}
+
+body .all .part2 button img {
+  width: 25px;
+  height: 18px;
+  margin-right: 25px;
+}
+
+body .all .part2 table {
+  border-collapse: collapse;
+  display: none;
+  margin: auto;
+  margin-top: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body .all .part2 table td {
+  padding: 5px;
+  text-align: center;
+}
+
+body .all .part3, body .all .part1 {
+  width: 33%;
+}
+
+body .all .part3 button, body .all .part1 button {
+  width: 180px;
+  height: 40px;
+  background-color: #5a065a;
+  color: white;
+  font-size: 18px;
+  border-radius: 20px;
+  border-style: none;
+  width: 300px;
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: lightgray;
+  margin: auto;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px;
+  padding-left: 15px;
+  text-align: center;
+  cursor: pointer;
+}
+
+body .all .part3 button:hover, body .all .part1 button:hover {
+  cursor: pointer;
+  background-color: lightgray;
+  color: #5a065a;
+}
+
+body .all .part3 button img, body .all .part1 button img {
+  height: 20px;
+  width: 20px;
+  margin-right: 70px;
+}
+
+body .all .part3 button img, body .all .part1 button img {
+  margin-right: 30px;
+}
+
+body .all .part3 table, body .all .part1 table {
+  display: none;
+  margin-top: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-collapse: collapse;
+}
+
+body .all .part3 table td, body .all .part1 table td {
+  padding: 5px;
+  text-align: center;
+}
+
+body .all .part3 .formDelete, body .all .part3 .formUpdate, body .all .part1 .formDelete, body .all .part1 .formUpdate {
+  margin-top: 40px;
+  display: none;
+}
+
+body .all .part3 .formDelete div, body .all .part3 .formUpdate div, body .all .part1 .formDelete div, body .all .part1 .formUpdate div {
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+body .all .part3 .formDelete div label, body .all .part3 .formUpdate div label, body .all .part1 .formDelete div label, body .all .part1 .formUpdate div label {
+  margin-left: -30px;
+}
+
+body .all .part3 .formDelete div input, body .all .part3 .formUpdate div input, body .all .part1 .formDelete div input, body .all .part1 .formUpdate div input {
+  margin-top: 20px;
+  margin-left: 10px;
+  background-color: #e0e0e0;
+  height: 40px;
+  border-radius: 10px;
+  border-style: none;
+  width: 270px;
+}
+
+body .all .part3 .formDelete div button, body .all .part3 .formUpdate div button, body .all .part1 .formDelete div button, body .all .part1 .formUpdate div button {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+  background-color: red;
+  width: 150px;
+  border-radius: 20px;
+  padding: 9;
+}
+
+body .part4 {
+  margin-top: 100px;
+}
+
+body .part4 #btnAdd {
+  width: 180px;
+  height: 40px;
+  background-color: #5a065a;
+  color: white;
+  font-size: 18px;
+  border-radius: 20px;
+  border-style: none;
+  width: 300px;
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: lightgray;
+  margin: auto;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px;
+  padding-left: 15px;
+  text-align: center;
+  cursor: pointer;
+}
+
+body .part4 #btnAdd:hover {
+  cursor: pointer;
+  background-color: lightgray;
+  color: #5a065a;
+}
+
+body .part4 #btnAdd img {
+  height: 20px;
+  width: 20px;
+  margin-right: 70px;
+}
+
+body .part4 #newHome {
+  display: none;
+  width: 100%;
+}
+
+body .part4 #newHome form {
+  width: 60%;
+  border: 1px solid black;
+  background-color: black;
+  border-radius: 15px;
+  margin: auto;
+  padding: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body .part4 #newHome form input {
+  padding: 10px;
+  width: 95%;
+  margin: auto;
+  height: 40px;
+  margin-bottom: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 15px;
+  color: black;
+  border-radius: 5px;
+}
+
+body .part4 #newHome form button {
+  width: 150px;
+  color: white;
+  font-size: 15px;
+  height: 40px;
+  border-style: none;
+  border-radius: 30px;
+  margin-top: 20px;
+  background-color: #5a065a;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1250px) {
+  body .all {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .all div {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    width: 100%;
+  }
+  body .all div table {
+    width: 90%;
+    margin: auto;
+  }
+}
+/*# sourceMappingURL=Admin.css.map */
