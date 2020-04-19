@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>User page</title>
-    <link href="../res/css/User.css" rel="stylesheet">
+    <link href="../res/css/ADMINUS.css" rel="stylesheet">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
 
@@ -14,8 +14,12 @@
         <div class="headtit">Renting Done Right. Finally.
             <button class="button4" type="submit" id="btnUpdate">Update your information!</button>
             <button class="button4" type="submit" id="btnDelete">Delete your account!</button>
+
         </div>
+
         <div class="all">
+            <a href="index.hbs"><button class="logout">  Logout </button></a>
+
             <div class="part1">
                 <table border=1 id="table1">
                     <thead>
@@ -46,8 +50,10 @@
 
 
             <form class="formUpdate" method="post" action="UPDATE">
-                <div><label for="E_mail" style="font-size: x-large;"> Email User : </label> <input type="text" name="E_mail"><br>
-                    <label for="Password"style="font-size: x-large;"> New Password : </label> <input type="text" name="Password">
+                <div><label for="E_mail" style="font-size: x-large;"> Email User : </label> <input type="text"
+                        name="E_mail"><br>
+                    <label for="Password" style="font-size: x-large;"> New Password : </label> <input type="text"
+                        name="Password">
                     <button type="submit" style="font-size: x-large;" class="button1">Update user</button></div>
             </form>
 
@@ -59,48 +65,49 @@
                     });
                 });
             </script>
-        {{!-- </div> --}}
+            {{!-- </div> --}}
 
 
-        <div class="part3">
-            <table border=1 id="table3">
-               <thead>
-                    <tr>
-                        <th> first name </th>
-                        <th> Last name </th>
-                        <th> E-mail </th>
-                        <th> Phone number </th>
-                        <th> Password </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {{#each InfosUser}}
-                    <tr>
-                        <td>{{this.first_name}}</td>
-                        <td>{{this.last_name}}</td>
-                        <td>{{this.E_mail}}</td>
-                        <td>{{this.Phone_number}}</td>
-                        <td>{{this.Password}}</td>
-                    </tr>
-                    {{/each}}
-                </tbody>
-            </table>
+            <div class="part3">
+                <table border=1 id="table3">
+                    <thead>
+                        <tr>
+                            <th> first name </th>
+                            <th> Last name </th>
+                            <th> E-mail </th>
+                            <th> Phone number </th>
+                            <th> Password </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each InfosUser}}
+                        <tr>
+                            <td>{{this.first_name}}</td>
+                            <td>{{this.last_name}}</td>
+                            <td>{{this.E_mail}}</td>
+                            <td>{{this.Phone_number}}</td>
+                            <td>{{this.Password}}</td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
 
-            <form class="formDelete" method="post" action="DELETE">
-                <div><label for="E_mail"  style="font-size: x-large;"> Email : </label> <input type="text" name="E_mail">
-                    <button type="submit" style="font-size: x-large;" class="button1">Delete user</button></div>
-            </form>
+                <form class="formDelete" method="post" action="DELETE">
+                    <div><label for="E_mail" style="font-size: x-large;"> Email : </label> <input type="text"
+                            name="E_mail">
+                        <button type="submit" style="font-size: x-large;" class="button1">Delete user</button></div>
+                </form>
 
-            <script>
-                $(document).ready(function () {
-                    $('#btnDelete').click(function () {
-                        $('#table3').slideToggle(1000);
-                        $('.formDelete').slideToggle(1000);
+                <script>
+                    $(document).ready(function () {
+                        $('#btnDelete').click(function () {
+                            $('#table3').slideToggle(1000);
+                            $('.formDelete').slideToggle(1000);
+                        });
                     });
-                });
-            </script>
+                </script>
+            </div>
         </div>
-    </div>
 
         {{!-- <div class="part2">
             <button type="button" id="btnShow"> <img src="../public/img/show.png">Show reservations</button>
@@ -158,7 +165,7 @@
                     $('#newHome').slideToggle(1000);
                 });
             });
-        </script> --}} 
+        </script> --}}
         {{!-- </div> --}}
         <script>
             function openNav() {

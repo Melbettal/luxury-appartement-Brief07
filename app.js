@@ -139,20 +139,20 @@ app.post("/LOGIN", urlencodedParser, function (req, res) {
         }
     }
     if (trouve) {
-        if (InfosSession.E_mail == "ADMIN") {
-            res.render("Admin", {
+        if (InfosSession.E_mail == "admin@gmail.com" && InfosSession.Password == "admin") {
+            res.render("ADMINUS", {
                 InfosUser,
-                Reservations
+                Maisons
             });
         } else {
-            res.render("Location2", {
+            res.render("User", {
                 InfosSession,
-                Maisons
+                Reservations
             });
         }
     } else {
         console.log("EMAIL OU MDP INCORRECT");
-        res.render(alert("Email or password wrong"));
+        res.render("PageErreur");
     }
 });
 // 

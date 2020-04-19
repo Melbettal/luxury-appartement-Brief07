@@ -110,7 +110,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 754px;
+  min-height: 454px;
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -264,257 +264,116 @@
   font-family: 'Modern No. 20', sans-serif;
 }
 
-body .espace {
-  height: 80px;
+section#Rent {
+  overflow-x: hidden;
+  padding: 30px 0;
+  text-align: center;
 }
 
-body .all {
-  width: 90%;
-  margin: auto;
-  display: inline-block;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-body .all .part1 {
-  width: 33%;
-}
-
-body .all .part1 #btnAdd {
-  width: 180px;
-  height: 40px;
-  color: white;
-  font-size: 18px;
-  border-radius: 20px;
-  border-style: none;
-  width: 300px;
-  color: white;
-  font-size: 20px;
-  border-radius: 10px;
-  margin: auto;
-  font-weight: bold;
+section#Rent .content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 5px;
-  padding-left: 15px;
-  text-align: center;
-  cursor: pointer;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-family: 'Modern No. 20', sans-serif;
 }
 
-body .all .part1 #btnAdd:hover {
-  cursor: pointer;
+section#Rent .content .card-promo {
+  width: 385px;
+  height: 400px;
+  overflow: hidden;
+  margin: 20px;
+  padding: 15px;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  background-color: #fff;
+  /* border-radius: 20px; */
+  -webkit-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
 
-body .all .part1 #btnAdd img {
-  height: 20px;
-  width: 20px;
-  margin-right: 70px;
-}
-
-body .all .part1 #newHome {
-  display: none;
+section#Rent .content .card-promo .promo-img {
   width: 100%;
+  height: 70%;
+  overflow: hidden;
+  /* border-radius: 20px; */
 }
 
-body .all .part1 #newHome form {
-  width: 90%;
-  border: 1px solid black;
-  background-color: black;
-  border-radius: 15px;
-  margin: auto;
-  padding: 30px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+section#Rent .content .card-promo .promo-img img {
+  width: 100%;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  position: relative;
 }
 
-body .all .part1 #newHome form input {
+section#Rent .content .card-promo:hover .promo-img img {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  opacity: 1;
+}
+
+section#Rent .content .promo-content {
+  height: 20%;
+  margin-top: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contry {
+  margin-top: -15px;
+}
+
+.box {
+  width: 40%;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 35px;
+  border: 2px solid #fff;
+  border-radius: 20px/50px;
+  background-clip: padding-box;
+  text-align: center;
+}
+
+.button {
+  font-size: 1em;
   padding: 10px;
-  width: 95%;
-  margin: auto;
-  height: 40px;
-  margin-bottom: 10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-size: 15px;
-  color: black;
-  border-radius: 5px;
-}
-
-body .all .part1 #newHome form button {
-  width: 150px;
-  color: white;
-  font-size: 15px;
-  height: 40px;
-  border-style: none;
-  border-radius: 30px;
-  margin-top: 20px;
-  background-color: #5a065a;
-  font-weight: bold;
+  color: #fff;
+  border: 2px solid #06D85F;
+  border-radius: 20px/50px;
+  text-decoration: none;
   cursor: pointer;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
-body .all .part2 {
-  width: 33%;
+.button:hover {
+  background: #06D85F;
 }
 
-body .all .part2 button {
-  width: 180px;
-  height: 40px;
-  color: white;
-  font-size: 18px;
-  border-radius: 20px;
-  border-style: none;
-  width: 300px;
-  color: white;
-  font-size: 20px;
-  border-radius: 10px;
-  margin: auto;
-  font-weight: bold;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 5px;
-  padding-left: 15px;
-  text-align: center;
-  cursor: pointer;
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-transition: opacity 500ms;
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
 }
 
-body .all .part2 button:hover {
-  cursor: pointer;
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
 }
 
-body .all .part2 button img {
-  height: 20px;
-  width: 20px;
-  margin-right: 70px;
-}
-
-body .all .part2 button img {
-  width: 25px;
-  height: 18px;
-  margin-right: 25px;
-}
-
-body .all .part2 table {
-  border-collapse: collapse;
-  display: none;
-  margin: auto;
-  margin-top: 50px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 80%;
-}
-
-body .all .part2 table th {
-  height: 50px;
-}
-
-body .all .part2 table th td {
-  padding: 5px;
-  text-align: center;
-}
-
-body .all .part3,
-body .all .part1 {
-  width: 33%;
-}
-
-body .all .part3 button,
-body .all .part1 button {
-  width: 180px;
-  height: 40px;
-  color: white;
-  font-size: 18px;
-  border-radius: 20px;
-  border-style: none;
-  width: 300px;
-  color: white;
-  font-size: 20px;
-  border-radius: 10px;
-  margin: auto;
-  font-weight: bold;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 5px;
-  padding-left: 15px;
-  text-align: center;
-  cursor: pointer;
-}
-
-body .all .part3 button:hover,
-body .all .part1 button:hover {
-  cursor: pointer;
-}
-
-body .all .part3 button img,
-body .all .part1 button img {
-  height: 20px;
-  width: 20px;
-  margin-right: 70px;
-}
-
-body .all .part3 button img,
-body .all .part1 button img {
-  margin-right: 30px;
-}
-
-body .all .part3 table,
-body .all .part1 table {
-  display: none;
-  margin-top: 50px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-collapse: collapse;
-}
-
-body .all .part3 table td,
-body .all .part1 table td {
-  padding: 5px;
-  text-align: center;
-}
-
-body .all .part3 .formDelete,
-body .all .part3 .formUpdate,
-body .all .part1 .formDelete,
-body .all .part1 .formUpdate {
-  margin-top: 40px;
-  display: none;
-}
-
-body .all .part3 .formDelete div,
-body .all .part3 .formUpdate div,
-body .all .part1 .formDelete div,
-body .all .part1 .formUpdate div {
-  display: inline-table;
-  width: 100%;
-  font-size: 20px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-body .all .part3 .formDelete div label,
-body .all .part3 .formUpdate div label,
-body .all .part1 .formDelete div label,
-body .all .part1 .formUpdate div label {
-  margin-left: -30px;
-}
-
-body .all .part3 .formDelete div input,
-body .all .part3 .formUpdate div input,
-body .all .part1 .formDelete div input,
-body .all .part1 .formUpdate div input {
-  height: 26px;
-  width: 191px;
-}
-
-body .all .part3 .formDelete div button,
-body .all .part3 .formUpdate div button,
-body .all .part1 .formDelete div button,
-body .all .part1 .formUpdate div button {
+#Rentme {
   font-family: 'Modern No. 20', sans-serif;
   letter-spacing: 2px;
   border-radius: 99px;
@@ -525,112 +384,56 @@ body .all .part1 .formUpdate div button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: black;
-  font-size: 25px;
-  font-weight: 250;
-  margin-top: 50px;
-  padding: 10px 20px;
-  background-color: white;
-  margin: 20px;
+  margin-top: -51px;
+  width: 30%;
+  height: 10%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 70%;
-}
-
-body .all .part4 {
-  margin-top: 100px;
-}
-
-body .all .part4 #btnAdd {
-  width: 180px;
-  height: 40px;
+  margin-left: auto;
+  background-color: #EAA85A;
   color: white;
-  font-size: 18px;
-  border-radius: 20px;
-  border-style: none;
-  width: 300px;
-  color: white;
-  font-size: 20px;
-  border-radius: 10px;
-  margin: auto;
-  font-weight: bold;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 5px;
-  padding-left: 15px;
-  text-align: center;
-  cursor: pointer;
-}
-
-body .all .part4 #btnAdd:hover {
-  cursor: pointer;
-}
-
-body .all .part4 #btnAdd img {
-  height: 20px;
-  width: 20px;
-  margin-right: 70px;
-}
-
-body .all .part4 #newHome {
-  display: none;
-  width: 100%;
-}
-
-body .all .part4 #newHome form {
-  width: 60%;
-  border: 1px solid black;
-  background-color: black;
-  border-radius: 15px;
-  margin: auto;
-  padding: 30px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-body .all .part4 #newHome form input {
-  padding: 10px;
-  width: 95%;
-  margin: auto;
-  height: 40px;
-  margin-bottom: 10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   font-size: 15px;
+}
+
+#Rentme:hover {
   color: black;
-  border-radius: 5px;
 }
 
-body .all .part4 #newHome form button {
-  width: 150px;
-  color: white;
-  font-size: 15px;
-  height: 40px;
-  border-style: none;
-  border-radius: 30px;
-  margin-top: 20px;
-  background-color: #5a065a;
+.hh4 {
+  display: block;
+  -webkit-margin-before: 1.33em;
+          margin-block-start: 1.33em;
+  -webkit-margin-after: 1.33em;
+          margin-block-end: 1.33em;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
   font-weight: bold;
-  cursor: pointer;
+  margin-top: -50px;
 }
 
-@media only screen and (max-width: 1250px) {
-  body .all body .all {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  body .all body .all div {
-    margin-top: 60px;
-    margin-bottom: 60px;
-    width: 100%;
-  }
-  body .all body .all div table {
-    width: 90%;
-    margin: auto;
-  }
+.pp4 {
+  display: block;
+  margin-top: -70px;
+  margin-left: 10px;
+}
+
+.price {
+  font-family: 'Modern No. 20', sans-serif;
+  font-size: 25px;
+  color: grey;
+  opacity: 1;
+  text-align: center;
+}
+
+.tte {
+  font-size: 70px;
+}
+
+.welcome {
+  font-size: 50%;
+  text-align: center;
 }
 /*# sourceMappingURL=User.css.map */

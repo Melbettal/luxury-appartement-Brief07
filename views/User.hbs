@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Page Admin</title>
+    <link href="../res/css/User.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div id="Header">
+        <div class="headtit">Renting Done Right. Finally.
+            <div class="welcome">Welcome <strong style="color: white;"> {{ InfosSession.first_name }}</strong></div>
+        </div>
+    </div>
+
+    <section id="Rent">
+        <div class="tte">Rent</div>
+        <div class="containerent">
+            <div class="content">
+                <div class="card-promo">
+
+
+                    <div class="promo-img">
+                        <img src="../img/R1.jpg" alt="">
+                    </div>
+                    <div class="promo-content">
+                        <div class="contry">
+                            <div class="hh4">RITZ PLAZA</div>
+                        </div>
+                        <div class="price">
+                            <div class="pp4">The Ritz Plaza, 235 West 48th Street, New York, NY 10036, USA</div>
+                        </div>
+                    </div>
+                    <button onclick="reserve()" id="Rentme">Rent me!</button>
+                </div>
+
+                <div class="card-promo">
+                    <div class="promo-img">
+                        <img src="../img/R2.jpg" alt="">
+                    </div>
+                    <div class="promo-content">
+                        <div class="contry">
+                            <div class="hh4">Raddit Units</div>
+                        </div>
+                        <div class="price">
+                            <div class="pp4">242 Mulberry St, New York, NY 10012, USA</div>
+                        </div>
+                    </div>
+                    <button onclick="reserve()" id="Rentme">Rent me!</button>
+                </div>
+
+                <div class="card-promo">
+                    <div class="promo-img">
+                        <img src="../img/R3.jpg" alt="">
+                    </div>
+                    <div class="promo-content">
+                        <div class="contry">
+                            <div class="hh4">Dutch</div>
+                        </div>
+                        <div class="price">
+                            <div class="pp4">19 Dutch Street, New York, NY 10038, USA</div>
+                        </div>
+                    </div>
+                    <button onclick="reserve()" id="Rentme">Rent me!</button>
+                </div>
+
+                <div class="card-promo">
+                    <div class="promo-img">
+                        <img src="../img/R4.jpg" alt="">
+                    </div>
+                    <div class="promo-content">
+                        <div class="contry">
+                            <div class="hh4">SUMMIT</div>
+                        </div>
+                        <div class="price">
+                            <div class="pp4">222 East 44th Street, New York, NY 10017, USA</div>
+                        </div>
+                    </div>
+                    <button onclick="reserve()" id="Rentme">Rent me!</button>
+                </div>
+
+                <div class="card-promo">
+                    <div class="promo-img">
+                        <img src="../img/R5.jpg" alt="">
+                    </div>
+                    <div class="promo-content">
+                        <div class="contry">
+                            <div class="hh4">Egypt - le grand tour</div>
+                        </div>
+                        <div class="price">
+                            <div class="pp4">Starting from 1430 $</div>
+                        </div>
+                    </div>
+                    <button onclick="reserve()" id="Rentme">Rent me!</button>
+                </div>
+
+                <div class="card-promo">
+                    <div class="promo-img">
+                        <img src="../img/R6.jpg" alt="">
+                    </div>
+                    <div class="promo-content">
+                        <div class="contry">
+                            <div class="hh4">India - Golden Triangle</div>
+                        </div>
+                        <div class="price">
+                            <div class="pp4">Starting from 1910 $</div>
+                        </div>
+                    </div>
+                    <button onclick="reserve()" id="Rentme">Rent me!</button>
+                </div>
+
+                <div class="card-promo">
+                    <div class="promo-img">
+                        <img src="../img/R7.jpg" alt="">
+                    </div>
+                    <div class="promo-content">
+                        <div class="contry">
+                            <div class="hh4">Antalya vol direct</div>
+                        </div>
+                        <div class="price">
+                            <div class="pp4">23 South 1st Street, New York, NY 11249, USA</div>
+                        </div>
+                    </div>
+                    <button onclick="reserve()" id="Rentme">Rent me!</button>
+                </div>
+
+                <div class="card-promo">
+                    <div class="promo-img">
+                        <img src="../img/R8.jpg" alt="">
+                    </div>
+                    <div class="promo-content">
+                        <div class="contry">
+                            <div class="hh4">Circuit Europe de l’Est</div>
+                        </div>
+                        <div class="price">
+                            <div class="pp4">50 Prince St, New York, NY 10012, USA</div>
+                        </div>
+                    </div>
+                    <button onclick="reserve()" id="Rentme">Rent me!</button>
+                </div>
+
+                <div class="card-promo">
+                    <div class="promo-img">
+                        <img src="../img/R9.jpg" alt="">
+                    </div>
+                    <div class="promo-content">
+                        <div class="contry">
+                            <div class="hh4">Brésil – Rio De Janeiro</div>
+                        </div>
+                        <div class="price">
+                            <div class="pp4">45 Clifton Pl, Jersey City, NJ 07304, USA
+                                Unit 3D</div>
+                        </div>
+                    </div>
+                    <button onclick="reserve()" id="Rentme">Rent me!</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="form" method="post">
+        <fieldset class="f1">
+          <h2 style="text-align: center;"> Rent this appartement </h2>
+          <table>
+            <tr>
+              <td> <label for="fnom"> first name : </label></td>
+              <td> <input type="text" style="text-transform: uppercase" id="fnom"> </td>
+              <td><span id="1"></span> </td>
+            </tr>
+            <tr>
+              <td> <label for="lnom"> last name : </label></td>
+              <td> <input type="text" style="text-transform: uppercase" id="lnom"> </td>
+              <td><span id="2"></span> </td>
+            </tr>
+
+            <tr>
+              <td><label for="date"> Birthday : </label> </td>
+              <td><input type="date" id="date"></td>
+              <td> <span id="3"></span></td>
+            </tr>
+
+            <tr>
+              <td><label for="datedebut"> Suggest a renting day: </label> </td>
+              <td><input type="date" id="datedebut"></td>
+              <td> <span id="4"></span> </td>
+            </tr>
+
+            <tr>
+              <td><label for="quantity"> Number of people : </label> </td>
+              <td><input type="number" id="quantity" name="quantity" min="1" max="5"></td>
+              <td> <span id="6"></span> </td>
+            </tr>
+
+            <tr>
+              <td><label for="nbr" id="pets"> Do you have any pets? : </label></td>
+              <td>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male" style="font-size: 15px;">Yes</label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female" style="font-size: 15px;">No</label><br>
+          </table>
+          <input type="submit" class="button5" value="Rent" onclick="Validate() , check()">
+        </fieldset>
+      </div>
+    </div>
+  </div>
+
+  <form method="post" id="validation">
+    <fieldset id="f1">
+      <h2> validation:</h2>
+      <div id="champ1"> Your appartement : </div>
+      <div id="champ2"> Your name is : </div>
+      <div id="champ3"> Your age : </div>
+      <div id="champ4"> the date : </div>
+      <div id="champ5"> People : </div>
+
+      <input type="button" id="button6" value="submit" class="close">
+    </fieldset>
+  </form>
+
+  <script src="../js/script.js"></script>
+  <script src="../js/jquery.js"></script>
+  <script src="../js/Jscripts.js"></script>
+ 
+
+  <script>
+
+      
+
+
+    var btnValider = document.getElementsByClassName("close")[0];
+    var modals = document.getElementById("validation");
+
+
+
+    var fnom = document.getElementById('fnom');
+    var lnom = document.getElementById('lnom');
+    var date = document.getElementById('date');
+    var datedebut = document.getElementById('datedebut');
+    var quantity = document.getElementById('quantity');
+    var cpt = 0;
+
+    function Validate() {
+      cpt = 0;
+      if (fnom.value == "") document.getElementById('1').innerHTML = "enter your first name ";
+      else {
+        document.getElementById('1').innerHTML = " ";
+        cpt++;
+      }
+      if (lnom.value == "") document.getElementById('2').innerHTML = "enter your last name";
+      else {
+        document.getElementById('2').innerHTML = " ";
+        cpt++;
+      }
+      if (date.value == "") document.getElementById('3').innerHTML = "enter your birthday";
+      else {
+        document.getElementById('3').innerHTML = " ";
+        cpt++;
+      }
+      if (datedebut.value == "") document.getElementById('4').innerHTML = "enter a valid date";
+      else {
+        document.getElementById('4').innerHTML = " ";
+        cpt++;
+      }
+      if (quantity.value == "") document.getElementById('6').innerHTML = "enter the number of people";
+      else {
+        document.getElementById('6').innerHTML = " ";
+        cpt++;
+      }
+      console.log(cpt);
+      return cpt;
+    }
+    function Validatesig() {
+      var rgxEmail = /^[A-Za-z0-9-_.]+@[A-Za-z]{4,9}.[A-Za-z]{2,3}$/;
+      var rgx = /^[0][5-7-6][0-9]{8}$/;
+      if (finom.value == "") document.getElementById('1').innerHTML = "enter your first name ";
+      else {
+        document.getElementById('1').innerHTML = " ";
+      }
+      if (linom.value == "") document.getElementById('2').innerHTML = "enter your last name";
+      else {
+        document.getElementById('2').innerHTML = " ";
+      }
+      if (email.value == "") document.getElementById('3').innerHTML = "enter a valid email";
+      else if (!rgxEmail.test(email.value)) document.getElementById('3').innerHTML = "incorrect format";
+      else {
+        document.getElementById('3').innerHTML = " ";
+      }
+      if (phone.value == "") document.getElementById('4').innerHTML = "enter a valid number";
+      else if (!rgx.test(phone.value)) document.getElementById('4').innerHTML = "incorrect number";
+      else {
+        document.getElementById('4').innerHTML = " ";
+      }
+      if (pwrd.value == "") document.getElementById('5').innerHTML = "enter a password";
+      else {
+        document.getElementById('5').innerHTML = " ";
+        cpt++;
+      }
+      if (confirm.value == "") document.getElementById('6').innerHTML = "re enter your password";
+      else {
+        document.getElementById('6').innerHTML = " ";
+        cpt++;
+      }
+      console.log(cpt);
+      return cpt;
+
+    }
+
+    function getAge(date) {
+      var diff = Date.now() - date.getTime();
+      var age = new Date(diff);
+      return Math.abs(age.getUTCFullYear() - 1970);
+    }
+
+    function diffdate(d1, d2) {
+      var WNbJours = d2.getTime() - d1.getTime();
+      return Math.ceil(WNbJours / (1000 * 60 * 60 * 24));
+    }
+
+    function check() {
+      if (cpt == 5) {
+        document.getElementById("myModal").style.display = "none";
+        document.getElementById("validation").style.display = "block";
+        document.getElementById('champ1').innerHTML += fnom.value;
+        document.getElementById('champ2').innerHTML += lnom.value;
+        document.getElementById('champ3').innerHTML += getAge(new Date(date.value));
+        document.getElementById('champ4').innerHTML += getAge(new Date(datedebut.value));
+        document.getElementById('champ5').innerHTML += quantity.value;
+        fnom.value = "";
+        lnom.value = "";
+        date.value = "";
+        datedebut.value = "";
+        quantity.value = "";
+        pets.value = "";
+      }
+    }
+
+
+    window.onclick = function (event) {
+      if (event.target == modals) {
+        modals.style.display = "none";
+      }
+      btnValider.onclick = function () {
+        modals.style.display = "none";
+        alert('Votre demande est effectuée !');
+        document.getElementById('champ1').innerHTML = "your appartement : ";
+        document.getElementById('champ2').innerHTML = "your name is : ";
+        document.getElementById('champ3').innerHTML = "your age : ";
+        document.getElementById('champ4').innerHTML = "the date : ";
+        document.getElementById('champ5').innerHTML = "people number : ";
+      }
+    }
+
+    /*this is the rent me modal script*/
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("Rentme");
+    var span = document.getElementsByClassName("close")[0];
+    var btnFermer = document.getElementById("button6");
+
+    btnFermer.onclick = function () {
+      f1.style.display = "none";
+    }
+
+    btn.onclick = function () {
+      modal.style.display = "block";
+    }
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+
+
+  </script>
+
+</body>
+
+</html>
