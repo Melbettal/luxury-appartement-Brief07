@@ -21,7 +21,7 @@ var InfosUser = LoadData.LoadJson(path_jsonfile);
 
 var path_jsonfile2 = 'reservation.json';
 var LoadData = require('./res/js/Readwrite.js');
-var Reservations = LoadData.LoadJson(path_jsonfile2);
+var reservation = LoadData.LoadJson(path_jsonfile2);
 
 var path_jsonfile3 = 'Maisons.json';
 var LoadData = require('./res/js/Readwrite.js');
@@ -47,26 +47,26 @@ app.use('/', express.static(__dirname + "/res"));
 app.get("/", function (req, res) {
     res.render("index");
 });
-app.get("/Reservation.hbs", function (req, res) {
-    res.render("Reservation");
-});
+// app.get("/Reservation.hbs", function (req, res) {
+//     res.render("Reservation");
+// });
 app.get("/Location.hbs", function (req, res) {
     res.render("Location");
 });
 app.get("/index.hbs", function (req, res) {
     res.render("index");
 });
-app.get("/Location2.hbs", function (req, res) {
-    res.render("Location2", {
+app.get("/User.hbs", function (req, res) {
+    res.render("User", {
         InfosSession,
-        Maisons
+        reservation
     });
 });
 app.get("/PageErreur.hbs", function (req, res) {
     res.render("PageErreur");
 });
-app.get("/Admin.hbs", (req, res) => {
-    res.render('Admin');
+app.get("/ADMINUS.hbs", (req, res) => {
+    res.render("ADMINUS");
 });
 
 
@@ -92,7 +92,7 @@ app.get('/', function (req, res) {
 // });
 
 
-//Create the infos in JSON file
+//Create the user infos in JSON file
 app.post("/index.hbs", urlencodedParser, function (req, res) {
     console.log(InfosUser);
     console.log(req.body);
@@ -141,13 +141,12 @@ app.post("/LOGIN", urlencodedParser, function (req, res) {
     if (trouve) {
         if (InfosSession.E_mail == "admin@gmail.com" && InfosSession.Password == "admin") {
             res.render("ADMINUS", {
-                InfosUser,
-                Maisons
+                InfosUser
             });
         } else {
             res.render("User", {
                 InfosSession,
-                Reservations
+                reservation
             });
         }
     } else {
@@ -169,7 +168,7 @@ app.post("/UPDATE", urlencodedParser, function (req, res) {
 
     var infos = JSON.stringify(InfosUser);
     LoadData.SaveJson(path_jsonfile, infos);
-    res.render("Location2", {
+    res.render("User", {
         InfosUser
 
     });
@@ -194,15 +193,15 @@ app.post("/DELETE", urlencodedParser, function (req, res) {
     }
     if (trouve) {
         console.log("Infos user now", InfosUser);
-        res.render("Location2", {
+        res.render("ADMINUS", {
             InfosUser,
-            Reservations
+            reservation
         });
     } else {
         console.log("Email introuvable !");
-        res.render("Location2", {
+        res.render("ADMINUS", {
             InfosUser,
-            Reservations
+            reservation
         });
     }
 
@@ -219,6 +218,57 @@ app.post("/DELETE", urlencodedParser, function (req, res) {
 
 
 });
+
+
+
+//create the reservation infos in JSON file
+app.post("/User.hbs", urlencodedParser, function (req, res) {
+    console.log(reservation);
+    console.log(req.body);
+    var data2 = SaveData2(req.body.first_name, req.body.last_name, req.body.Birthday, req.body.Renting_date, req.body.Number_of_people);
+    res.render('User', {
+        data2
+    });
+});
+
+function SaveData2(first_name, last_name, Birthday, Renting_date, Number_of_people) {
+    var data2 = {
+        first_name: first_name,
+        last_name: last_name,
+        Birthday: Birthday,
+        Renting_date: Renting_date,
+        Number_of_people: Number_of_people,
+    };
+    reservation.push(data2);
+    console.log(data2);
+
+    var reserv = JSON.stringify(reservation);
+    LoadData.SaveJson(path_jsonfile2, reserv);
+    return data2;
+}
+
+//Ajouter des maisons dans un fichier json
+// app.post("/ADD",urlencodedParser,function(req,res){  
+//     var data3=SaveData3(req.body.image,req.body.description,req.body.adresse,req.body.prix);
+//     res.render('Location2',{Maisons});
+// });
+
+// function SaveData3(image,description,adresse,prix)
+// {
+//     var data3= 
+//         { 
+//             image:"../public/img/"+image, 
+//             description : description,
+//             adresse: adresse,
+//             prix: prix
+//         };
+//         Maisons.push(data3);
+//         console.log("voici la data ajoutée " ,data3);
+
+//     var infosMaisons = JSON.stringify(Maisons);
+//     LoadData.SaveJson(path_jsonfile3,infosMaisons);
+//     return data3; 
+// }
 
 
 

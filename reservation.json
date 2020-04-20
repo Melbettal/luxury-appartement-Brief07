@@ -1,8 +1,1 @@
-[{
-    "first_name": "bla",
-    "last_name": "blabla",
-    "Birthday": "01/11/1999",
-    "Renting_date": "15/04/2021",
-    "Number_of_people": "2"
-}]
-
+[{"first_name":"bla","last_name":"blabla","Birthday":"01/11/1999","Renting_date":"15/04/2021","Number_of_people":"2"},{}]
